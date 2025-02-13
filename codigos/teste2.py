@@ -3,7 +3,18 @@ pygame.init()
 
 window = pygame.display.set_mode((600,600))
 pygame.display.set_caption("car game")
-img = pygame.image.load("https://github.com/fabianoferrari/trafficflow/blob/main/figures/carros/Car64.png")
+
+image_url = 'https://raw.githubusercontent.com/fabianoferrari/trafficflow/refs/heads/main/figures/carros/Car64.png'
+save_as = 'Car64.png'
+
+import requests 
+from PIL import Image 
+from io import BytesIO 
+ 
+response = requests.get(image_url)
+ 
+img = pygame.image.load(BytesIO(response.content))
+
 
 class Car:
     def __init__(self, x, y, height, width):
