@@ -3,7 +3,7 @@ pygame.init()
 
 window = pygame.display.set_mode((600,600))
 pygame.display.set_caption("car game")
-img = pygame.image.load("/home/fabiano/Repositories/trafficflow/figures/carros/Car64.png")
+img = pygame.image.load("https://github.com/fabianoferrari/trafficflow/blob/main/figures/carros/Car64.png")
 
 class Car:
     def __init__(self, x, y, height, width):
